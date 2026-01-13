@@ -10,7 +10,7 @@ load_dotenv()
 # Initialize Flask app
 app = Flask(__name__)
 base_url = os.getenv("URL_FOR_API")
-# Make a GET request to the REST API
+# Make a GET request to the REST API to the country endpoint
 @app.route('/country_info/<country_name>', methods=['GET'])
 def get_country_info(country_name):
     url = base_url + country_name
